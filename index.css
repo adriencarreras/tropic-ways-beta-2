@@ -1,0 +1,600 @@
+/* ///////////////////////////////////////// HERO SECTION ///////////////////////////////////////// */
+/* ///////////////////////////////////////// HERO SECTION ///////////////////////////////////////// */
+/* ///////////////////////////////////////// HERO SECTION ///////////////////////////////////////// */
+
+section.hero{
+    min-height: 100svh;
+    padding: 0 var(--padding-wide);
+    overflow-x: initial;
+    /* overflow-y: hidden; */
+}
+
+.hero .hero-image{
+    background-image: url(media/general/asset_9-min.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero .bg-filter{
+    opacity: .35;
+    animation: fade-out;
+    animation-range: exit;
+    animation-timeline: view();
+    animation-timing-function: linear;
+
+}
+
+/* text elements */
+
+.hero .side-text{
+    position: absolute;
+    top: 15vh;
+    z-index: 1;
+    opacity: 0;
+    /* padding: .5rem 2rem .5rem 0rem;
+    border-top: 2px solid var(--clr-white-1); */
+    padding: 1rem;
+    border-left: 2px solid var(--clr-white-1);
+    animation: slideRight ease-in-out 1400ms forwards;
+
+}
+
+.hero .side-text p{
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.825rem;
+    text-transform: uppercase;
+    color: var(--clr-white-1);
+}
+
+.hero .text-wrapper{
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0 var(--padding-wide);
+
+    display: flex;
+    align-items: center;
+}
+
+.hero .text-wrapper > *{
+    text-align: center;
+    color: var(--clr-white-1);
+    
+    animation: fadeIn ease-in-out 1000ms forwards;
+    opacity: 0;
+    text-shadow: 1px 3px 6px rgba(0,0,0,.2);
+}
+
+.hero .text-wrapper h2{ animation-delay: 0ms }
+
+.hero .text-wrapper h1{ animation-delay: 200ms }
+
+.hero .text-wrapper p{ animation-delay: 400ms }
+
+.hero .text-wrapper .btn-container{ animation-delay: 600ms }
+
+.hero .text-wrapper h2{
+    margin-bottom: 8px;
+}
+
+.hero .text-wrapper p{
+    max-width: 450px;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.hero .btn-container{
+    margin-top: 12px;
+    margin-top: 24px;
+    padding: 0;
+}
+
+.hero .btn{
+    flex: 1;
+    min-width: fit-content;
+    color: var(--clr-white-1);
+    border: 2px solid var(--clr-white-1);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.hero .languages{
+    position: absolute;
+    z-index: 1;
+    right: var(--padding-wide);
+    bottom: var(--padding-wide);
+
+    padding: .3rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    opacity: 0.5;
+    
+    color: #fff;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    transition: opacity ease-out 250ms;
+    animation-name: slideLeft;
+    animation-duration: 1400ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+
+    color: #ffffff00;
+    border: 1px solid #ffffff00;
+
+    cursor: pointer;
+}
+
+
+.hero .side-text,
+.hero .languages,
+header.hero-header{ animation-delay: 1000ms }
+
+
+.hero .languages i{
+    margin-right: .5rem;
+}
+
+.hero .languages:hover{
+    opacity: 1;
+    box-shadow: 0px 0px 4px rgba(0,0,0,.3);
+}
+
+/* .hero .scroll-btn{
+    position: absolute;
+    z-index: 0;
+    bottom: calc(10vh + 28px);
+    left: 0;
+    right: 0;
+
+    background: transparent;
+    border: none;
+    color: var(--clr-white-1);
+    text-transform: uppercase;
+}
+
+.hero .scroll-btn i{
+    margin-left: 12px;
+} */
+
+
+
+
+/* ///////////////////////////////////////// LAYOUT 3 SECTION ///////////////////////////////////////// */
+/* ///////////////////////////////////////// LAYOUT 3 SECTION ///////////////////////////////////////// */
+/* ///////////////////////////////////////// LAYOUT 3 SECTION ///////////////////////////////////////// */
+
+
+.layout-3{
+    padding: var(--padding-h8) var(--padding-wide);
+    background: var(--clr-white-2);
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.layout-3 .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 1440px;
+}
+
+.layout-3 .text-wrapper{
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+    padding: 56px 24px 0px 24px;
+}
+
+.layout-3 .text-wrapper i{
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--clr-black)
+}
+
+.layout-3 .text-wrapper > p{
+    font-weight: 300;
+}
+
+/* ///////////////////////////////////////// TOURS SECTION ///////////////////////////////////////// */
+/* ///////////////////////////////////////// TOURS SECTION ///////////////////////////////////////// */
+/* ///////////////////////////////////////// TOURS SECTION ///////////////////////////////////////// */
+
+.tours{
+    padding: var(--padding-h8) 0 calc(var(--padding-h8)*1.5) 0;
+    background: var(--clr-white-1);    
+}
+
+.tours .grid{
+    width: 100%;
+    max-width: 1250px;
+    padding: 48px 3.8vw;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vh;
+}
+
+.tours .card{
+    aspect-ratio: 3 / 5;
+    border-radius: var(--default-radius);
+    box-shadow: 2px 4px 12px rgba(0,0,0,.2);
+    overflow: hidden;
+
+    position: relative;
+    background: white;
+}
+
+.tours .card .img{
+    /* filter: saturate(150%);              ------------- turned off for loading deficiencies */
+    transition: all ease-out 500ms;
+}
+
+.tours .card:hover .img{
+    transform: scale(1.15);
+}
+
+.tours .filter-1{
+    opacity: .2;
+    border-radius: var(--default-radius);
+}
+
+.tours .filter-2{
+    opacity: .85;
+    background: linear-gradient(transparent, #000);
+    top: 75%;
+    border-radius: var(--default-radius);
+}
+
+.tours .card a{
+    position: absolute;
+    inset: 0;
+
+    text-decoration: none;
+    background: transparent;
+    border-radius: var(--default-radius);
+    z-index: 1;
+}
+
+.tours .card a .price-tag{
+    position: absolute;
+    z-index: 5;
+    top: 5%;
+    left: 5%;
+    
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--clr-white-1);
+    padding: .5rem 1rem;
+    border-radius: var(--default-radius);
+}
+
+.tours .card .price-tag .price{
+    font-weight: 600;
+}
+
+.tours .card .text-wrapper{
+    position: absolute;
+    z-index: 5;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    overflow: hidden;
+}
+
+.tours .card .text-wrapper .location{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--clr-white-1);
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    
+}
+
+.tours .card .text-wrapper .name{
+    text-transform: capitalize;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--clr-white-1);
+    line-height: 1.8rem;
+}
+
+.tours .grid:last-child{
+    display: grid;
+    place-content: center;
+}
+
+.tours .card:last-of-type a{
+    display: grid;
+    place-content: center;
+    
+    background: #000000ba;
+}
+
+.tours .card:last-of-type a p{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--clr-white-1);
+    line-height: 3rem;
+}
+
+
+/* ///////////////////////////////////////// ABOUT SECTION ///////////////////////////////////////// */
+/* ///////////////////////////////////////// ABOUT SECTION ///////////////////////////////////////// */
+/* ///////////////////////////////////////// ABOUT SECTION ///////////////////////////////////////// */
+
+
+.about-us{
+    padding: 110px var(--padding-wide);
+    background: var(--clr-black);  
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    overflow-x: hidden;
+
+    background-image: url(media/sisNbro.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+.about-us .blur{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+.about-us .text-wrapper{
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.about-us h2{
+    text-align: start;
+    margin-bottom: 1.5rem;
+    color: var(--clr-white-1);
+}
+
+.about-us .text-wrapper > *{
+    color: var(--clr-white-1);
+}
+
+.about-us .btn{
+    margin-top: 1.5rem;
+}
+
+.about-us .img{
+    position: absolute;
+    top: 50%;
+    left: -276px;
+    transform: translateY(-50%);
+    z-index: -5;
+
+    width: 250px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-image: url(media/sisNbro2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: 2px solid var(--clr-white-1);
+}
+
+
+/* ///////////////////////////////////////// ACCOMMODATION SECTION ///////////////////////////////////////// */
+/* ///////////////////////////////////////// ACCOMMODATION SECTION ///////////////////////////////////////// */
+/* ///////////////////////////////////////// ACCOMMODATION SECTION ///////////////////////////////////////// */
+
+.accommodation{
+    display: flex;
+    padding: 80px var(--padding-wide);
+}
+
+.accommodation .text-wrapper{
+    flex: 1;
+    padding: 100px var(--padding-center) 110px var(--padding-wide);
+}
+
+.accommodation h2{
+    text-align: start;
+    margin-bottom: 24px;
+}
+
+.accommodation .btn{
+    margin-top: 1.5rem;
+}
+
+.accommodation .img{
+    flex: 1;
+    position: relative;
+
+}
+
+/* ///////// CONTACT SECTION ///////// */
+.contact{
+    padding: var(--padding-h8) var(--padding-wide);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact h2{
+    margin-bottom: 24px;
+}
+
+
+/* ///////////////////////////
+////////////////////////////////////
+///////// ANIMATIONS /////////
+////////////////////////////////////
+/////////////////////////// */
+
+.hero-header{
+    position: absolute;
+    animation: slideDown ease-in-out 1400ms forwards;
+    opacity: 0;
+}
+
+/* Hero image fade out */
+@keyframes  fade-out {
+    0% {opacity: 0.45;}
+    100% {opacity: 1};
+}
+
+/* Hero text slide-in */
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Hero text wrapper fade in */
+@keyframes fadeIn {
+    0%{
+        transform: translateY(20vh);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Hero language slide-in */
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        color: #ffffff00;
+        border: 1px solid #ffffff00;
+    }
+    100%{
+        transform: translateX(0);
+        color: #ffffff;
+        border: 1px solid #fff;
+    }
+}
+
+
+/* ///////////////////////////
+////////////////////////////////////
+///////// MEDIA QUERIES /////////
+////////////////////////////////////
+/////////////////////////// */
+
+
+@media (max-width: 990px) {
+    .layout-3 .container{
+        flex-direction: column;
+        align-items: center;
+        gap: var(--padding-wide);
+    }
+
+    .layout-3 .text-wrapper{
+        padding: 24px var(--padding-wide);
+    }
+
+    .tours .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px){
+    .hero .text-wrapper h2{
+        margin-bottom: 12px;
+    }
+
+    .about-us .img,
+    .hero .languages{
+        display: none;
+    }
+
+    .tours .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .accommodation{
+        flex-direction: column;
+        padding-inline: 0;
+    }
+    
+}
+
+@media (max-width: 430px){
+    .hero .text-wrapper h2{
+        margin-bottom: 6px;
+    }
+
+    .hero .text-wrapper .btn{
+        margin-top: 16px;
+    }
+
+    .tours .grid{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 48px 8vw;
+    }
+
+    .tours .grid .card:nth-child(4),
+    .tours .grid .card:nth-child(5),
+    .tours .grid .card:nth-child(6),
+    .tours .grid .card:nth-child(7){
+        display: none;
+    }
+
+    .about-us .text-wrapper{
+        padding: 80px var(--padding-wide);
+    }
+
+    .about-us .text-wrapper h2,
+    .about-us .text-wrapper p{
+        text-align: center;
+    }
+
+    .about-us .text-wrapper .btn{
+        margin: 1.5rem auto 0 auto;
+    }
+
+    .accommodation{
+        padding: 80px 0;
+    }
+
+    .accommodation .text-wrapper{
+        padding: 100px calc(var(--padding-wide)*2);
+    }
+    .accommodation .text-wrapper .section-heading,
+    .accommodation .text-wrapper h2,
+    .accommodation .text-wrapper p{
+        display: block;
+        text-align: center;
+    }
+
+    .accommodation .text-wrapper .btn{
+        margin: 1.5rem auto 0 auto;
+    }
+}
